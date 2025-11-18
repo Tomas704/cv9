@@ -10,20 +10,20 @@ namespace df {
 
 class CSVConfig {
 public:
-    static CSVConfig createFromJsonNode(const nlohmann::json &node);
-    static CSVConfig createFromJsonFile(const std::filesystem::path &path);
-    static CSVConfig createFromParams(char delimiter);
-    static CSVConfig createDefault();
+  static CSVConfig createFromJsonNode(const nlohmann::json &node);
+  static CSVConfig createFromJsonFile(const std::filesystem::path &path);
+  static CSVConfig createFromParams(char delimiter);
+  static CSVConfig createDefault();
 
 public:
-    char getDelimiter() const;
-    void print(std::ostream &ost) const;
+  char getDelimiter() const;
+  void print(std::ostream &ost) const;
 
 private:
-    CSVConfig() = default;
+  CSVConfig() = default;
 
 private:
-    char m_delimiter;
+  char m_delimiter;
 };
 
 } // namespace df
